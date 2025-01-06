@@ -1,0 +1,177 @@
+:root {
+    --clr-primary-400: hsl(158, 36%, 37%);
+    --clr-secondary-200: hsl(30, 38%, 92%);
+    
+    --clr-neutral-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(238, 12%, 40%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+     
+    --ff-account: font-family:"Fraunces", serif; 
+    --ff-base: "Montserrat", sans-serif;  
+    
+    --fw-regular: 500;
+      --fw-bold: 700;
+
+}/* CSS Reset/*
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+
+
+  body{
+    font-family: var(--ff-base);
+    font-family: var(--fw-regular);
+    font-size: 1rem;
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-secondary-200);
+    display: grid;
+     min-height: 100vh;
+    place-content: center;
+    margin: 1rem;
+}
+
+/* Utilites*/
+.flex-group{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    }
+    
+    
+    
+    .visually-hidden:not(:focus):not(:active){
+      clip: rect();
+      clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+         white-space: nowrap;    
+        width: 1px;
+    
+    }
+    
+    
+    
+    
+    
+    /*Product styles */
+    
+    .Product{
+        --content-paddding: 1.5rem;
+        --content-spacing: 1rem;
+      
+      background-color: var(--clr-neutral-100);
+      border: radius 0.5em;
+      overflow: hidden;
+    }
+    
+    
+    
+    .product_content{
+        
+        display: grid;
+        gap: var(--content-spacing);
+        padding: var(--content-paddding);
+    }
+
+
+
+.product_category {
+     letter-spacing: 6px;
+    text-transform: uppercase;
+     font-size: 0.8125rem ;
+}
+
+
+.product_title{
+font-size: 2rem;
+font-family: var(--ff-account);
+color: var(--clr-neutral-900);
+font-style: var(--fw-bold);
+
+}
+
+
+.Para{
+    font-size: 1.1rem;
+    font-style: var(--fw-bold);
+
+}
+
+.product_price{
+    font-size: 2rem;
+    font-family: var(--ff-account); 
+    color: var(--clr-primary-400);
+}
+
+
+
+.button{
+        cursor: pointer;
+        text-decoration: none;
+        padding: .75rem 1.5rem;
+        border: 0;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+       background-color: var(--clr-primary-400);
+        color: var(--clr-neutral-100);
+        font-size: 0.925rem;
+        font-weight: var(--fw-bold);
+}
+
+
+.button:1s(:hover, :focus){
+    background-color: hsl(158, 36%, 27%);
+}
